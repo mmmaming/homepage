@@ -19,7 +19,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18.18.2"
+          node-version: "16.14.2"
 
       # 下载依赖、打包项目
       - name: Install and Build
@@ -36,7 +36,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
           ARGS: "-avz --delete"
-          SOURCE: "dist/"
+          SOURCE: "build/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST }}
           REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
           TARGET: "${{ secrets.SERVER_TARGET }}"
