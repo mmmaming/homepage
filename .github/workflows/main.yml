@@ -39,4 +39,5 @@ jobs:
           SOURCE: "build/"
           REMOTE_HOST: ${{ secrets.SERVER_HOST }}
           REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
+          # /home/homepage
           TARGET: "${{ secrets.SERVER_TARGET }}"
